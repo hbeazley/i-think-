@@ -1,0 +1,142 @@
+// final project 
+
+#include <iostream>
+#include <vector> 
+#include <fstream>
+#include <cstdlib>
+#include <algorithm>
+
+using namespace std;
+
+void showChoices();
+void createFile(vector<float>);
+void randomFile(vector<float>);
+void readFile(vector<float>);
+void sortFile(vector<float>);
+void searchFile(vector<float>);
+
+int main() {
+
+	float x;
+	int choice;
+	
+	do {
+		showChoices();
+		cin >> choice;
+		switch (choice) {
+			case 1:
+				cout<< "Enter File Name: ";
+				cin >> x; 
+				cout << "Create" << createFile;
+				break;
+			case 2:
+				cout << "Ener File Name: ";
+				cin >> x;
+				cout << "Create" << randomFile;
+				break;
+			case 3:
+				cout << "Enter file name: ";
+				cin >> x;
+				cout << "Read" << readFile;
+				break;
+			case 4:
+				cout << "Enter File Name: ";
+				cin >> x; 
+				cout << "Sort" << sortFile;
+				break;
+			case 5: 
+				cout << "Enter File Name: ";
+				cin >> x;
+				cout << "Search" <<  searchFile;
+				break;
+			case 6:
+				break;
+			default: 
+				cout << "Invalid input";	
+		while (x != 6);
+		}
+	return 0; 
+}
+}
+
+void (showChoices()) {
+	cout << "    MENU   " ;
+	cout << "************" ;
+	cout << "1: Create a file";
+	cout << "2. Create random file";
+	cout << "3. Read a file" ;
+	cout << "4. Sort a file" ;
+	cout << "5. Search a file" ;
+	cout << "6. Quit program" ;
+	cout << "Enter choic (1-6): "; 
+}
+
+void createFile(vector<float> &x) {
+	vector<float> numElems;
+	int num; 
+	cout << "Enter name of file to create: "; 
+	cin >> x;
+	cout << "How many values for your vector? "; 
+	cin >> numElems;  
+		for (float val: numElems) {
+			cout << "Enter element #" << numElems << "for the vector: ";
+			cin << num; 
+		}
+}
+
+void randomFile(vector<float> &x){
+	vector<float> numElems;
+	int rand(); 
+	cout << "Enter name of file to create: "; 
+	cin >> x;
+	cout >> "How many values for your vectors?"
+	cin >> numElems;
+	 for (int i = 1; i <= numElems; i++) {
+	 	cout << rand() << end1;
+	 }
+	return 0;
+}
+
+void readFile(vector<float> &x){
+	char input[SIZE]; 
+	cout << "Enter name of file to create: "; 
+	cin >> x;
+	nameFile.getline(input, SIZE); 
+	while(!nameFile.eof()) {
+		cout << input; 
+		}
+	nameFile.close();
+	return 0;
+}
+
+void sortFile(vector<float> x){
+	bool found = false;
+	int value;  
+	cout >> "Enter name of file to read: ";
+	cin << x; 
+	cout >> "Enter a value that can be searched in the file: ";
+	cin << value; 
+	while (int index =0; index < x.size(); index++ ){
+		if(x[index] == value) {
+			found = true;
+			position = index;
+		}
+		index++; 
+	}
+		
+	
+}
+void searchFile(vector<float> &x){
+	int results;
+	cout >> "Enter name of file to read:" ;
+	cin << vector<float> &x;
+	cout >> "Enter name of sortred output file to create: "; 
+	cin << results;
+	
+	if (results == -1){
+		cout << "That number does not exist";
+	}
+		else {
+			cout << "The value has been found: " << results; 
+		}
+	}
